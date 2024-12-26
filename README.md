@@ -18,12 +18,11 @@
        - *Compile-Time polymorphism(Method overloading)* : same method name with different parameter lists(number, type, or order).
        - *Run-Time polymorphism(Method overriding)* : A child class provides its specific implementation for a method defined in the parent class.
     6. Abstraction:
-      - Hiding the implemetation details of a feature and exposing only the essential features.
-      - Achived through abstract classes or interfaces.
-      - *Abstract Class*:
-           Contains both abstract(no implementation) and concrete methods.
-           use the ```abstract``` keyword
-      - *Interface*:
-           Contains only abstract methods.
-           it support multiple inheritance.      
+       - Hiding the implemetation details of a feature and exposing only the essential features.
+       - Achived through abstract classes or interfaces.
+       - *Abstract Class*: Contains both abstract(no implementation) and concrete methods.  use the ```abstract``` keyword.
+       - *Interface*: Contains only abstract methods. it support multiple inheritance.
+
+           
+                 
 
