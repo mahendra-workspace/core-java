@@ -8,7 +8,7 @@
      - An instance of a class is called object. Objects are real-world entities with state and behavior.
      - objects are created using ```new``` keyword. They hold specific values for the attributes defined in the class.
    3. Encapsulation:
-   - The practice of wrapping data(field) and methods into a single unit(class) and restricting direct access to some of the object's components.
+     - The practice of wrapping data(field) and methods into a single unit(class) and restricting direct access to some of the object's components.
 
    4. Inheritance:
       -  A mechanism by which one class(child/sub class) can acquire properties and behaviors of another class(parent/super class) by use of ```extends``` keyword   
