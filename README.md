@@ -35,9 +35,9 @@
     11. **Dynamic Binding :**
         - A mechanism where the code to be executed for a method call is decided at runtime.
        
-  ## STRINGS
-  -   A String in Java is a sequence of characters.
-  -   Strings are immutable in Java, meaning their content cannot be changed once they are created.
+## STRINGS
+- A String in Java is a sequence of characters.
+- Strings are immutable in Java, meaning their content cannot be changed once they are created.
   **Why Strings are Immutable in Java**
   - *Security:* Strings are often used for sensitive data like passwords, database connection URLs, etc. If strings were mutable, modifying one instance would impact other references, leading to security issues.
   - *Caching and Optimization:* The JVM uses a string pool to save memory. Since strings are immutable, multiple references can point to the same instance without the risk of changes.
