@@ -49,4 +49,43 @@
  - Avoid methods that allow modifications to the object's state for example setter methods
  - Ensure deep copy: If the class contains mutable objects, ensure that only a copy of the object is returned.
 
-
+## Multithreading
+- Multithreading is a Java feature that allows multiple threads to run concurrently within a program. Each thread represents a separate path of execution.
+- **Thread**
+  - A thread is a lightweight sub-process, the smallest unit of processing.
+- **Process-based Multitasking**
+  - Each process has its own memory and resources.
+- **Thread-based Multitasking**
+  - Threads within the same process share memory and resources.
+- **Ways to Create Threads in Java**
+  - Extending the ```Thread``` Class.
+  - Implementing the ```Runnable``` Interface.
+  - Using ```Callable``` and ```Future``` (For threads that return results).
+  - Using the ```ExecutorService``` Framework.
+- **Thread Lifecycle**
+  - New: Thread is created but not yet started.
+  - Runnable: Thread is ready to run and is waiting for CPU time.
+  - Running: Thread is executing.
+  - Blocked/Waiting: Thread is waiting for a resource or signal.
+  - Terminated: Thread has completed execution.
+- **Thread Class Methods**
+  - ```start()```: Starts a new thread and invokes the ```run()``` method.
+  - ```run()```: Defines the task to be executed by the thread.
+  - ```sleep(long milliseconds)```: Makes the thread sleep for the specified time.
+  - ```join()```: Waits for a thread to finish before proceeding.
+  - ```yield()```: Pauses the current thread to allow others of the same priority to execute.
+  - ```getName()```: Gets the name of the thread.
+  - ```setName(String name)```: Sets the thread's name.
+  - ```getPriority()```: Gets the thread's priority.
+  - ```setPriority(int priority)```: Sets the thread's priority (range: 1 to 10).
+  - ```isAlive()```: Checks if the thread is still running.
+- **Thread Synchronization**
+  - Synchronization ensures that shared resources are accessed by only one thread at a time, avoiding thread interference and data inconsistency.
+- **Inter-Thread Communication**
+   - ```wait()```: Makes the thread wait until notified.
+   - ```notify()```: Wakes up a single thread waiting on the object's monitor.
+   - ```notifyAll()```: Wakes up all threads waiting on the object's monitor.
+- **Deadlock**
+  - A deadlock occurs when two or more threads are waiting indefinitely for resources locked by each other.
+  - use ```tryLock()`` to avoid deadlock from java.util.concurrent.locks.
+- The ```ExecutorService``` framework provides better thread management compared to manually creating and starting threads.
