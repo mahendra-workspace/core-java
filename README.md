@@ -35,6 +35,18 @@
     11. **Dynamic Binding :**
         - A mechanism where the code to be executed for a method call is decided at runtime.
        
-           
-                 
+  ## STRINGS
+  -   A String in Java is a sequence of characters.
+  -   Strings are immutable in Java, meaning their content cannot be changed once they are created.
+  **Why Strings are Immutable in Java**
+  - *Security:* Strings are often used for sensitive data like passwords, database connection URLs, etc. If strings were mutable, modifying one instance would impact other references, leading to security issues.
+  - *Caching and Optimization:* The JVM uses a string pool to save memory. Since strings are immutable, multiple references can point to the same instance without the risk of changes.
+  - *Thread Safety:* Immutability ensures that strings can be shared among multiple threads without synchronization.
+
+ ## Custom Immutable Class
+ - Custom immutable class are created using ```final``` keyword which prevents other classes from inheriting and modifying its behaviour.
+ - All the fields should be ```private``` and ```final``` ensures that field cannot be changed after object created.
+ - Avoid methods that allow modifications to the object's state for example setter methods
+ - Ensure deep copy: If the class contains mutable objects, ensure that only a copy of the object is returned.
+
 
