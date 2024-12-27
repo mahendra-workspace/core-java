@@ -134,4 +134,14 @@
   - Used for custom or multiple ordering.
   - Create a separate class implementing the ```Comparator``` interface.
   - Override the ```compare()``` method.
-  - 
+- **Fail-Fast & Fail-Safe**
+  - These are two design principles used in programming and system design, focusing on how systems or components behave in the event of a failure.
+  - In Java, fail-fast and fail-safe principles are applied primarily in the context of iterators in collections.
+  - **Fail-Fast:** A system or component is designed to detect and report failures immediately as they occur. It stops further execution when an error is encountered.
+  - The ```Iterator``` i.e. ```ArrayList```, ```HashMap```, and ```HashSet```.  in Java is fail-fast. If a collection is modified while iterating (e.g., adding or removing elements without using the iterator), it throws a ```ConcurrentModificationException```.
+  - Fail-fast iterators rely on a ```modCount``` variable (modification count) that keeps track of changes to the collection. When an iterator is created, it captures the current ```modCount```. During iteration, it checks whether the ```modCount``` has changed. If so, it throws a ```ConcurrentModificationException```.
+  - Fail-Fast is Faster due to direct iteration on the original collection. 
+  - **Fail-Safe** A system or component is designed to continue operating, possibly in a reduced or degraded state, even when an error occurs. It Ensure the system remains functional or safe, even if parts fail.
+  - The ```CopyOnWriteArrayList```, ```ConcurrentHashMap```, ```CopyOnWriteArraySet``` is fail-safe. A fail-safe iterator operates on a copy of the collection, so it is not affected by structural modifications to the original collection during iteration.
+  - Fail-Safe is Slower due to overhead of working with a copy.
+     
