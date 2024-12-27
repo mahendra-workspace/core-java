@@ -144,4 +144,9 @@
   - **Fail-Safe** A system or component is designed to continue operating, possibly in a reduced or degraded state, even when an error occurs. It Ensure the system remains functional or safe, even if parts fail.
   - The ```CopyOnWriteArrayList```, ```ConcurrentHashMap```, ```CopyOnWriteArraySet``` is fail-safe. A fail-safe iterator operates on a copy of the collection, so it is not affected by structural modifications to the original collection during iteration.
   - Fail-Safe is Slower due to overhead of working with a copy.
+
+## Stream Api
+- It provides a functional approach to processing sequences of elements (e.g., collections) and enables operations such as filtering, mapping, and reducing.
+- Stream is a sequence of elements supporting sequential and parallel aggregate operations. It's not a data structure; it doesn't store data but processes data in a functional manner.
+- Intermediate Operations return a new Stream and are always lazy. Some common intermediate operations include ```filter```, ```map```, ```flatMap```, ```distinct```, ```sorted```, and ```limit```.
      
