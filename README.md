@@ -89,3 +89,49 @@
   - A deadlock occurs when two or more threads are waiting indefinitely for resources locked by each other.
   - use ```tryLock()`` to avoid deadlock from java.util.concurrent.locks.
 - The ```ExecutorService``` framework provides better thread management compared to manually creating and starting threads.
+
+## Collection Framework
+- Java Collections is a framework that provides classes and interfaces for storing and manipulating groups of objects. It includes data structures like lists, sets, maps, and queues and provides methods for sorting, searching, shuffling, etc.
+- The Collections Framework is part of the ```java.util``` package
+- **Interfaces**
+  - Interfaces define the abstract types of collections, specifying the operations that can be performed on them without dictating how these operations are implemented.
+  - **List:** An ordered collection that allows duplicate elements. ```ArrayList```, ```LinkedList```, etc.
+  - **Set:** A collection that does not allow duplicate elements. ```HashSet```, ```LinkedHashSet```, etc.
+  - **Map:** A collection that maps keys to values, with no duplicate keys allowed. ```HashMap```, ```TreeMap```, etc.
+  - **Queue:** A collection used to hold multiple elements prior to processing, typically in a FIFO order. ```LinkedList```, ```PriorityQueue```, etc.
+  - **Deque:** A double-ended queue that allows elements to be added or removed from both ends. ```ArrayDeque```, ```LinkedList```, etc.
+- **Classes**
+  -  These classes provide concrete implementations of the collection interfaces, offering different features.
+  - **ArrayList:** A resizable array implementation of the ```List``` interface, providing fast random access and efficient resizing.
+  - **LinkedList:**  A doubly linked list implementation of the ```List``` and ```Deque``` interfaces, allowing efficient insertion and removal at both ends.
+  - **HashSet:** A hash table implementation of the ```Set``` interface, offering fast lookups(searching) and no ordering of elements.
+  - **LinkedHashSet:** Similar to ```HashSet``` but maintains a linked list of entries, preserving insertion order.
+  - **HashMap:**  A hash table implementation of the ```Map``` interface, providing fast key-value pair lookups(searching).
+  - **TreeMap:** A red-black tree implementation of the ```Map``` interface, maintaining keys in sorted order.
+- **Utility Classes**
+  - The ```Collections``` class is part of the framework and provides numerous static methods for common collection operations.
+  - **Sorting:** ```Collections.sort(list)``` sorts a list of elements.
+  - **Searching:** ```Collections.binarySearch(list, key)``` performs a binary search on a sorted list.
+  - **Synchronization:** ```Collections.synchronizedList(list)``` returns a thread-safe list backed by the specified list.
+  - **Shuffling:** ```Collections.shuffle(list)``` randomly permutes the elements of a list.
+  - **Unmodifiable Collections:** ```Collections.unmodifiableList(list)``` returns an unmodifiable view of the specified list, making it immutable. 
+- **Comparable**
+  - Use ```Comparable``` when you need a default sorting order for objects in a class.
+  - A class implements the ```Comparable``` interface.
+  - Override the ```compareTo()``` method.
+  - Interface in ```java.lang```.
+  - Sorting Logic Defined in the class itself.
+  - Supports single sorting logic.
+  - Modifies the class being compared.
+  - Used when default ordering is required. for example sorting ```String``` or ```Integer```.
+- **Comparator**
+  - Use ```Comparator``` when you need custom sorting logic or multiple ways to compare objects.
+  - Sorting Logic Defined externally in a separate class.
+  - Interface in ```java.util```.
+  - Supports multiple sorting logics.
+  - Implements the ```compare()``` method.
+  - Does not modify the class being compared.
+  - Used for custom or multiple ordering.
+  - Create a separate class implementing the ```Comparator``` interface.
+  - Override the ```compare()``` method.
+  - 
