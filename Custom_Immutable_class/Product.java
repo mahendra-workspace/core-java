@@ -1,4 +1,4 @@
-package CUSTOMIMMUTABLE;
+package Custom_Immutable_class;
 
 import java.util.ArrayList;
 import java.util.List;
