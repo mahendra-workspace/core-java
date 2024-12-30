@@ -1,4 +1,6 @@
 # CORE-JAVA
+- Java doesn't support multiple inheritance of classes, it does support multiple inheritance of behavior through interfaces.
+- 
 ## OOP concepts
 - Object oriented programming is a programming paradigm that resolves around the concept of "objects". These objects encapsulate data(attributes) and methods(behaviours) that operate on that data.
 - Java's OOP concepts are set of principles that help in designing and organizing programs in a structured, reusable, and maintainable manner.
@@ -150,3 +152,13 @@
 - Stream is a sequence of elements supporting sequential and parallel aggregate operations. It's not a data structure; it doesn't store data but processes data in a functional manner.
 - Intermediate Operations return a new Stream and are always lazy. Some common intermediate operations include ```filter```, ```map```, ```flatMap```, ```distinct```, ```sorted```, and ```limit```.
      
+## Java 8 Feature
+- **Lambda Expressions**
+  - Lambda expressions enable functional programming by allowing you to write concise code to represent functions.
+- **Functional Interfaces**
+  - A functional interface has a single abstract method and can be used with lambda expressions.
+- **Default Methods in Interfaces**
+  - Allow add new methods to an interface without affecting the classes that already implement the interface.
+  - Allow to provide a default implementation for a method directly in the interface.
+  - Default methods support multiple inheritance of behavior, meaning a class can inherit default methods from multiple interfaces.
+  - it is not necessary to provide an implementation for default methods when a class implements an interface.
