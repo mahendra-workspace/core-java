@@ -89,7 +89,7 @@
    - ```notifyAll()```: Wakes up all threads waiting on the object's monitor.
 - **Deadlock**
   - A deadlock occurs when two or more threads are waiting indefinitely for resources locked by each other.
-  - use ```tryLock()`` to avoid deadlock from java.util.concurrent.locks.
+  - use ```tryLock()``` to avoid deadlock from java.util.concurrent.locks.
 - The ```ExecutorService``` framework provides better thread management compared to manually creating and starting threads.
 
 ## Collection Framework
