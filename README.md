@@ -152,7 +152,66 @@
 - Stream is a sequence of elements supporting sequential and parallel aggregate operations. It's not a data structure; it doesn't store data but processes data in a functional manner.
 - Intermediate Operations return a new Stream and are always lazy. Some common intermediate operations include ```filter```, ```map```, ```flatMap```, ```distinct```, ```sorted```, and ```limit```.
 - The ```Collectors``` utility provides methods for performing mutable reductions.
-     
+- **Key Characteristics:**
+  - **Lazy Evaluation**: Operations on streams are performed only when a terminal operation is executed.
+  - **Immutable:** Streams do not modify the source; they produce a new stream or result.
+  - **Single Use:** A Stream cannot be reused after a terminal operation.
+  - **Functional:** Leverages lambda expressions to process data.
+
+- **How to Create a Stream**
+  - **From a Collection:**
+  - ``` List<String> list = Arrays.asList("A", "B", "C");```
+  - ```Stream<String> stream = list.stream(); ``` 
+  - **From Arrays:**
+  - ```String[] array = {"A", "B", "C"};```
+  - ```Stream<String> stream = Arrays.stream(array);```
+  - **Using Stream.of():**
+  - ```Stream<String> stream = Stream.of("A", "B", "C");```
+  - **Infinite Streams:**
+  - ```Stream<Integer> infiniteStream = Stream.iterate(0, n -> n + 1);```
+  - **From Files:**
+  - ```Stream<String> lines = Files.lines(Paths.get("file.txt"));```
+- **Stream Operations**
+  1. **Intermediate Operations** These operations transform a stream into another stream. They are lazy and do not process the elements until a terminal operation is invoked.
+     - ```filter(Predicate):``` Filters elements based on a condition.
+     - ```stream.filter(s -> s.startsWith("A"));```
+     - ```map(Function):``` Transforms each element.
+     - ```stream.map(String::toUpperCase);```
+     - ```sorted():``` Sorts elements in natural order or using a comparator.
+     - ```stream.sorted();```
+     - ```distinct():``` Removes duplicates.
+     - ```stream.distinct();```
+     - ```limit(long n):``` Truncates the stream to the first n elements.
+     - ```stream.limit(5);```
+     - ```skip(long n):``` Skips the first n elements.
+     - ```stream.skip(3);```
+  2. **Terminal Operations:*** These operations produce a result or a side effect and mark the end of the stream.
+     - ```collect():``` Collects elements into a collection or other data structure.
+     - ```List<String> result = stream.collect(Collectors.toList());```
+     - ```forEach(Consumer):``` Performs an action on each element.
+     - ```stream.forEach(System.out::println);```
+     - ```reduce(BinaryOperator):``` Reduces elements to a single value.
+     - ```Optional<Integer> sum = stream.reduce((a, b) -> a + b);```
+     - ```count():``` Returns the count of elements.
+     - ```long count = stream.count();```
+     - ```anyMatch()```/```allMatch()```/```noneMatch()```: Checks conditions.
+     - ```boolean anyMatch = stream.anyMatch(s -> s.startsWith("A"));```
+     - ```findFirst()```/```findAny():``` Returns an element.
+     - ```Optional<String> first = stream.findFirst();```
+- **Collectors :**Collectors are used in the terminal operation ```collect()``` to accumulate elements.
+  - **```toList():```**
+  - ```List<String> list = stream.collect(Collectors.toList());```
+  - **```toSet():```**
+  - ```Set<String> set = stream.collect(Collectors.toSet());```
+  - **```joining():```**
+  - ```String result = stream.collect(Collectors.joining(", "));```
+  - **```groupingBy():```**
+  - ```Map<Integer, List<String>> grouped = stream.collect(Collectors.groupingBy(String::length));```
+
+
+
+
+    
 ## Java 8 Feature
 - **Lambda Expressions**
   - Lambda expressions enable functional programming by allowing you to write concise code to represent functions.
